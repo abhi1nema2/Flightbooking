@@ -7,10 +7,14 @@ To get you started you can simply clone this project's repository and install th
 
 # Install Dependencies
 First you need to install XAMPP to create a local Server to run the PHP codes.
+
 Here is link to Download XAMPP
 https://www.apachefriends.org/xampp-files/7.1.11/xampp-win32-7.1.11-0-VC14-installer.exe
+
 After installing XAMPP
+
 Open XAMPP Control Panel and start Apache sercer and MYSQL Service.
+
 then to copy Flight(Project Folder) to C:\xampp\htdocs
 Open Web Browser and type "localhost/flight/index.php"
 TO run the Website
@@ -25,9 +29,13 @@ comfortable user experience along with the best pricing available.
 
 # INFORMATION 
 Website contains login SignUP and Book webpages
+
 HTML and CSS for Designing 
+
 MYsql and PHP for Database connectivity and Data storage
+
 Used Javascipt for Form validation
+
 JQuery for datapicker
 
 # WEBSITE is Currently under progress
