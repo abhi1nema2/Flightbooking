@@ -1,0 +1,164 @@
+<html>
+
+<head>
+
+<title>JS VALIDATE</title>
+
+</head>
+
+
+
+<script>
+
+	function validateform()
+
+	{
+
+		var name=document.myform.name.value;
+
+		var password=document.myform.password.value;
+
+		
+
+		if(name==null||name=="")
+
+		{
+
+			document.getElementById("pic").src="unchecked.png";
+
+			document.getElementById("demo").innerHTML = "Name can't be blank";
+
+			return false;
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("pic").src="checked.png";
+
+			document.getElementById("demo").innerHTML = "Correct";
+
+		}
+
+		
+
+		if(password.length<6)
+
+		{
+
+			alert("Password must be at least 6 characters long");
+
+			return false;	
+
+		} 
+
+		
+
+		var secondpassword=document.myform.password2.value;
+
+		if(password!=secondpassword)
+
+		{
+
+			alert("Password must be same!");
+
+			return false;
+
+		}
+
+		
+
+		var x=document.myform.email.value;
+
+		var atposition=x.indexOf("@");
+
+		var dotposition=x.lastIndexOf(".");
+
+		if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+
+		{
+
+			alert("Please enter a valid email address");
+
+			return false;
+
+		}
+
+		alert("Successfully registered!");
+
+	}
+
+</script>
+
+<div align="center">
+
+<body bgcolor="pink">
+
+
+<h1 color="purple"><i> JAVASCRIPT FORM VALIDATION </h1></i> 	
+	<form name="myform" method="post" action="#" onsubmit="return validateform()">
+
+		<table>
+
+			<tr style="height:50px">
+
+				<td style="width:120px;"><b>Name:</b></td>
+
+				<td style="width:500px" align="left"><input type="text" name="name" /><img id="pic" style="padding-left:10px"  /><span id="demo" style="padding-left:10px"></span></td>
+
+			</tr>
+
+		<br/><br/>
+
+			<tr style="height:50px">
+
+				<td><b>Password:</td></b>
+
+				<td><input type="password" name="password" /></td>
+
+			</tr>
+
+		<br/><br/><br/><br/>
+<br>
+			<tr style="height:50px">
+
+				<td><b>Retype password:</b></td>
+
+				<td><input type="password" name="password2" /></td>
+
+			</tr>
+
+		
+
+			<tr style="height:50px">
+
+				<td><b>Email:</td></b>
+
+				<td><input type="text" name="email" /></td>
+
+			</tr>
+
+			
+
+			<tr style="height:50px">
+
+				<td></td>
+
+				<td><b>
+
+		<input type="submit" value="Register" /></td></b>
+
+			</tr>
+
+		</table>
+
+	
+
+	</form>
+
+</body>
+</div>
+</html>
+
